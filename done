@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Arial", sans-serif;
+      }
+
+      header {
+        background: url("img/national-cancer-institute-NFvdKIhxYlU-unsplash.jpg")
+          center/cover no-repeat;
+        height: 500px;
+        position: relative;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #logo {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        max-width: 100px;
+      }
+
+      .mobile-nav-toggle {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 20px;
+        color: white;
+        margin: 0;
+        padding: 0;
+        outline: none;
+        z-index: 2;
+      }
+
+      .sidebar {
+        position: fixed;
+        top: 0;
+        right: -250px;
+        width: 250px;
+        height: 100%;
+        background-color: #333;
+        padding-top: 60px;
+        transition: 0.5s;
+        z-index: 1;
+      }
+
+      .sidebar a {
+        padding: 15px 25px;
+        text-decoration: none;
+        font-size: 20px;
+        color: white;
+        display: block;
+        transition: 0.3s;
+      }
+
+      .sidebar a:hover {
+        background-color: #555;
+      }
+
+      header,
+      nav {
+        z-index: 0;
+      }
+
+      nav {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: #fff;
+        padding: 10px;
+        border-radius: 10px;
+        display: none;
+      }
+
+      nav a {
+        color: #011338;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 20px;
+        font-weight: bold;
+        transition: color 0.3s ease-in-out;
+      }
+
+      nav a:hover {
+        color: black;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      }
+
+      section {
+        padding: 50px;
+      }
+
+      .about-section {
+        background-color: #f8f8f8;
+        border-radius: 15px;
+        padding: 30px;
+        text-align: center;
+      }
+
+      .ceo-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .ceo-text {
+        font-weight: bold;
+        font-size: 36px;
+        color: transparent;
+        background: linear-gradient(90deg, #8b0000 50px, #000000 50px);
+        background-clip: text;
+        -webkit-background-clip: text;
+        margin-top: 50px;
+      }
+
+      .ceo-image-container {
+        border: 5px solid #8b0000;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-top: 20px;
+        width: 200px; /* Adjust as needed */
+        height: 200px; /* Adjust as needed */
+      }
+
+      .ceo-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .ceo-name {
+        margin-top: 20px;
+        font-size: 24px;
+        color: #333;
+      }
+
+      .ceo-message {
+        margin-top: 20px;
+        color: #333;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .course-card {
+        border: 1px solid #ccc;
+        padding: 20px;
+        margin: 20px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      @media (min-width: 768px) {
+        nav {
+          display: block;
+        }
+
+        .ceo-section {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
+        .ceo-image {
+          margin-top: 0;
+        }
+
+        .course-card {
+          width: 48%;
+        }
+
+        .mobile-nav-toggle {
+          display: none;
+        }
+
+        .sidebar {
+          right: -250px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img id="logo" src="img/logo-removebg-preview.png" alt="Logo" />
+      <button class="mobile-nav-toggle" onclick="toggleSidebar()">☰</button>
+      <nav id="mainNav">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Courses</a>
+        <a href="#">Contact</a>
+        <!-- Add more navigation links as needed -->
+      </nav>
+      <div class="ceo-text">Best College of Paramedical in India</div>
+    </header>
+
+    <div class="sidebar">
+      <a href="#" onclick="toggleSidebar()">Close</a>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Courses</a>
+      <a href="#">Contact</a>
+      <!-- Add more sidebar links as needed -->
+    </div>
+
+    <section id="about" class="about-section">
+      <div class="ceo-section">
+        <div class="ceo-image-container">
+          <img class="ceo-image" src="img/call-to-action.jpg" alt="CEO Image" />
+        </div>
+        <div class="ceo-name">John Doe</div>
+      </div>
+      <div class="ceo-message">
+        <p>
+          Welcome to our Paramedical Institute, where excellence meets
+          education. Our mission is to provide top-notch training in the field
+          of healthcare and produce skilled professionals who make a difference
+          in the world of paramedicine.
+        </p>
+        <!-- Add more content to reach 500 words -->
+        <!-- You can add more paragraphs or modify the existing ones -->
+        <p>
+          Our institute is committed to fostering an environment of learning and
+          innovation. We believe in equipping our students with not just
+          theoretical knowledge but also practical skills that are crucial in
+          the dynamic field of paramedicine.
+        </p>
+        <p>
+          As the CEO, I am proud to lead a team of dedicated educators and staff
+          who are passionate about shaping the future of healthcare. We strive
+          to create an atmosphere that encourages curiosity, critical thinking,
+          and hands-on experience.
+        </p>
+        <p>
+          Whether you're a prospective student or a supporter of our mission, we
+          invite you to explore the exciting opportunities that our Paramedical
+          Institute has to offer. Together, let's make a positive impact on the
+          healthcare landscape.
+        </p>
+        <!-- Continue adding content as needed -->
+      </div>
+    </section>
+
+    <section id="courses">
+      <h2>Courses</h2>
+      <div class="course-card">
+        <h3>Course 1</h3>
+        <p>Information about Course 1 goes here...</p>
+      </div>
+
+      <div class="course-card">
+        <h3>Course 2</h3>
+        <p>Information about Course 2 goes here...</p>
+      </div>
+      <!-- Add more course cards as needed -->
+    </section>
+
+    <script>
+      function toggleSidebar() {
+        var sidebar = document.querySelector(".sidebar");
+        sidebar.style.right = sidebar.style.right === "0px" ? "-250px" : "0";
+      }
+    </script>
+  </body>
+</html>

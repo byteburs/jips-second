@@ -1,0 +1,303 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px;
+  background-color: #1abc9c;
+  color: white;
+}
+
+/* Style the social media icons */
+.social {
+  display: flex;
+  gap: 10px;
+}
+
+/* Style the contact details */
+.contact {
+  display: flex;
+  gap: 10px;
+}
+
+/* Style the icons */
+.icon {
+  width: 30px;
+  height: 30px;
+}
+
+/* Style the navigation bar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+}
+
+/* Style the navigation links */
+.navbar a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the color of links on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a toggle button for small screens */
+.navbar .toggle {
+  display: none;
+}
+
+/* Style the main content */
+.main {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+/* Style the background image */
+.bg-image {
+  background-image: url("img/about-1.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  width: 140%; /* Set the width to 100% to cover the full row */
+  position: relative;
+}
+
+/* Style the text on the background image */
+.bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px black;
+}
+
+/* Style the enquiry form */
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  padding: 20px;
+  background-color: burlywood;
+  border: 2px solid #d60808;
+  border-radius: 10px; /* Add rounded corners if desired */
+}
+
+/* Style the form inputs */
+.form input,
+.form textarea {
+  padding: 10px;
+  border: 1px solid #e70f0f;
+  border-radius: 5px; /* Add rounded corners if desired */
+}
+
+/* Optional: Style the form submit button */
+.form button {
+  padding: 10px;
+
+  border: none;
+  border-radius: 5px; /* Add rounded corners if desired */
+  cursor: pointer;
+}
+
+/* Optional: Add hover effect to the button */
+.form button:hover {
+  background-color: #ff5252;
+}
+/* Style the close button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  background-image: url("img/close.png");
+  background-size: cover;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+}
+
+/* Style the about section */
+.about {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border: 1px solid #333;
+}
+
+/* Style the principal image */
+.principal {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+/* Style the principal thoughts */
+.thoughts {
+  font-style: italic;
+  font-size: 24px;
+}
+
+/* Style the courses section */
+.courses {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Style the course cards */
+.card {
+  width: 200px;
+  height: 300px;
+  border: 1px solid #333;
+  box-shadow: 2px 2px 4px #333;
+  transition: transform 0.3s;
+}
+
+/* Add some hover effects to the course cards */
+.card:hover {
+  transform: scale(1.1);
+}
+
+/* Style the card content */
+.card-content {
+  padding: 20px;
+}
+
+/* Style the card title */
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Style the card description */
+.card-description {
+  font-size: 18px;
+}
+
+/* Style the testimonial section */
+.testimonial {
+  display: flex;
+  align-items: center;
+  overflow-x: scroll;
+  padding: 20px;
+  border: 1px solid #333;
+}
+
+/* Hide the scrollbar */
+.testimonial::-webkit-scrollbar {
+  display: none;
+}
+
+/* Style the testimonial items */
+.testimonial-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  min-width: 300px;
+  padding: 20px;
+}
+
+/* Style the testimonial images */
+.testimonial-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+/* Style the testimonial quotes */
+.testimonial-quote {
+  font-size: 18px;
+  font-style: italic;
+}
+
+/* Style the contact section */
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Style the map */
+.map {
+  width: 400px;
+  height: 300px;
+  background-image: url("map.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Style the address */
+.address {
+  font-size: 18px;
+}
+
+/* Style the footer */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+}
+
+/* Style the footer links */
+.footer a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the color of footer links on hover */
+.footer a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Responsive layout - makes the toggle button appear on small screens */
+@media screen and (max-width: 600px) {
+  .navbar a:not(:first-child) {
+    display: none;
+  }
+  .navbar a.toggle {
+    float: right;
+    display: block;
+  }
+}
+
+/* Responsive layout - makes the navbar links stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .navbar.responsive {
+    position: relative;
+  }
+  .navbar.responsive .toggle {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}

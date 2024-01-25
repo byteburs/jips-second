@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Arial", sans-serif;
+      }
+
+      header {
+        background: url("img/national-cancer-institute-NFvdKIhxYlU-unsplash.jpg")
+          center/cover no-repeat;
+        height: 500px;
+        position: relative;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #logo {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        max-width: 100px;
+      }
+
+      .mobile-nav-toggle {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 20px;
+        color: white;
+        margin: 0;
+        padding: 0;
+        outline: none;
+        z-index: 2;
+      }
+
+      .sidebar {
+        position: fixed;
+        top: 0;
+        right: -250px;
+        width: 250px;
+        height: 100%;
+        background-color: #333;
+        padding-top: 60px;
+        transition: 0.5s;
+        z-index: 1;
+      }
+
+      .sidebar a {
+        padding: 15px 25px;
+        text-decoration: none;
+        font-size: 20px;
+        color: white;
+        display: block;
+        transition: 0.3s;
+      }
+
+      .sidebar a:hover {
+        background-color: #555;
+      }
+
+      header,
+      nav {
+        z-index: 0;
+      }
+
+      nav {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: #fff;
+        padding: 10px;
+        border-radius: 10px;
+        display: none;
+      }
+
+      nav a {
+        color: #011338;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 20px;
+        font-weight: bold;
+        transition: color 0.3s ease-in-out;
+      }
+
+      nav a:hover {
+        color: black;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      }
+
+      section {
+        padding: 50px;
+      }
+
+      .ceo-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .ceo-text {
+        font-weight: bold;
+        font-size: 50px;
+        color: transparent;
+        background: linear-gradient(90deg, #8b0000 50px, #000000 50px);
+        background-clip: text;
+        -webkit-background-clip: text;
+        margin-top: 50px;
+      }
+
+      .ceo-image {
+        max-width: 200px;
+        margin-top: 20px;
+      }
+
+      .course-card {
+        border: 1px solid #ccc;
+        padding: 20px;
+        margin: 20px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      @media (min-width: 768px) {
+        nav {
+          display: block;
+        }
+
+        .ceo-section {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
+        .ceo-image {
+          margin-top: 0;
+        }
+
+        .course-card {
+          width: 48%;
+        }
+
+        .mobile-nav-toggle {
+          display: none;
+        }
+
+        .sidebar {
+          right: -250px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img id="logo" src="img/logo-removebg-preview.png" alt="Logo" />
+      <button class="mobile-nav-toggle" onclick="toggleSidebar()">☰</button>
+      <nav id="mainNav">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Courses</a>
+        <a href="#">Contact</a>
+        <!-- Add more navigation links as needed -->
+      </nav>
+      <div class="ceo-text">
+        <span>Welcome to the </span>Best College of Paramedical in India
+      </div>
+    </header>
+
+    <div class="sidebar">
+      <a href="#" onclick="toggleSidebar()">Close</a>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Courses</a>
+      <a href="#">Contact</a>
+      <!-- Add more sidebar links as needed -->
+    </div>
+
+    <section id="about">
+      <div class="ceo-section">
+        <div>
+          <h2>About Us</h2>
+          <p>
+            Welcome to our Paramedical Institute, where excellence meets
+            education. Our mission is to provide top-notch training in the field
+            of healthcare and produce skilled professionals who make a
+            difference in the world of paramedicine.
+          </p>
+        </div>
+        <img class="ceo-image" src="img/call-to-action.jpg" alt="CEO Image" />
+      </div>
+    </section>
+
+    <section id="courses">
+      <h2>Courses</h2>
+      <div class="course-card">
+        <h3>Course 1</h3>
+        <p>Information about Course 1 goes here...</p>
+      </div>
+
+      <div class="course-card">
+        <h3>Course 2</h3>
+        <p>Information about Course 2 goes here...</p>
+      </div>
+
+      <!-- Add more course cards as needed -->
+    </section>
+
+    <script>
+      function toggleSidebar() {
+        var sidebar = document.querySelector(".sidebar");
+        sidebar.style.right = sidebar.style.right === "0px" ? "-250px" : "0";
+      }
+
+      const cookie = document.cookie;
+      console.log("shubhammmmmmmmmmmmmmmmmmmm");
+      console.log(document.cookie);
+
+      //get cookie
+      var cookiename = getCookie("cookiename");
+      if (cookiename == "value") {
+        //write your script
+      }
+
+      //function getCookie
+      function getCookie(cname) {
+        var name = cname + "=";
+        console.log("shubhmjha");
+        var ca = document.cookie.split(";");
+        for (var i = 0; i < ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) == " ") c = c.substring(1);
+          if (c.indexOf(name) != -1) return c.substring(name.length, c.length);
+        }
+        return "";
+      }
+      getCookie();
+    </script>
+  </body>
+</html>
